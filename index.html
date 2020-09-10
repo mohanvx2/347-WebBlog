@@ -1,10 +1,116 @@
 <!DOCTYPE html>
 <html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+  box-sizing: border-box;
+}
+
+/* Add a gray background color with some padding */
+body {
+  font-family: Arial;
+  padding: 20px;
+  background: #f1f1f1;
+}
+
+/* Header/Blog Title */
+.header {
+  padding: 30px;
+  font-size: 40px;
+  text-align: center;
+  background: white;
+}
+
+/* Create two unequal columns that floats next to each other */
+/* Left column */
+.leftcolumn {   
+  float: left;
+  width: 75%;
+}
+
+/* Right column */
+.rightcolumn {
+  float: left;
+  width: 25%;
+  padding-left: 20px;
+}
+
+/* Fake image */
+.fakeimg {
+  background-color: #aaa;
+  width: 100%;
+  padding: 20px;
+}
+
+/* Add a card effect for articles */
+.card {
+   background-color: white;
+   padding: 20px;
+   margin-top: 20px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Footer */
+.footer {
+  padding: 20px;
+  text-align: center;
+  background: #ddd;
+  margin-top: 20px;
+}
+
+/* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 800px) {
+  .leftcolumn, .rightcolumn {   
+    width: 100%;
+    padding: 0;
+  }
+}
+</style>
+</head>
 <body>
 
-<h1>My First Heading</h1>
+<div class="header">
+  <h2>CS 347-Web Blog-Varun Mohan</h2>
+</div>
 
-<p>My first paragraph VARUN.</p>
+<div class="row">
+  <div class="leftcolumn">
+    <div class="card">
+      <h2>Blog Entry #1:</h2>
+      <h5>Sep 10th, 2020</h5>
+      <p>Readers,</p>
+      <p>These past two weeks in CS 347 we primarily focused on getting 
+      introduced into HTML and CSS. Through a mix of lectures and 
+      synchronous lab meetings I've learned a good deal of how 
+      websites are constructed at a basic level.
+      
+      	One particularly helpful resource was <a href = "https://info340.github.io/">Chapter 4</a> of Client-side Web Development. It gave good examples and helpful information on the general structure of
+        websites including footers, headings and more. In addition our synchronous labs were a great way to bounce ideas off each other and helped
+        to improve our collaboration skills. </p>
+        <p>Another useful technique we learned was the use of <a href = "https://www.youtube.com/watch?v=dF81Lfx9z4A&feature=youtu.be">flex boxes</a>. This allows us to re-order and manipulate the content of webpages on a larger scale. Prior to this different padding/positional values and tricks were the only methods I knew of how to change up the structure of a page. Hopefully I can make some use of these techniques to improve this page in the future!</p>
+        <p>Thank you all for reading!</p>
+        <p>- Varun</p>
+    </div>
+  </div>
+  <div class="rightcolumn">
+    <div class="card">
+      <h2>About Me</h2>
+      <p>I am a senior at James Madison University currently studying
+      Computer Science. I have worked primarily in application and systems programming jobs but am open to other fields, preferably in fintech roles. In my free time, I enjoy playing video games, staying active physically, and hanging out with my friends.</p>
+    <div class="card">
+      <h3>Social Media</h3>
+      <p>Twitter: @VMohan101</p>
+      <p>Linkedin: @Varun Mohan</p>
+    </div>
+  </div>
+</div>
 
 </body>
 </html>
